@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lbl_n1 = new System.Windows.Forms.Label();
             this.lbl_n2 = new System.Windows.Forms.Label();
             this.lbl_n3 = new System.Windows.Forms.Label();
@@ -152,7 +153,7 @@
             // 
             // btn_n2
             // 
-            this.btn_n2.Location = new System.Drawing.Point(923, 572);
+            this.btn_n2.Location = new System.Drawing.Point(861, 579);
             this.btn_n2.Name = "btn_n2";
             this.btn_n2.Size = new System.Drawing.Size(26, 23);
             this.btn_n2.TabIndex = 12;
@@ -163,22 +164,23 @@
             // grp_n1
             // 
             this.grp_n1.Controls.Add(this.lbl_5);
-            this.grp_n1.Location = new System.Drawing.Point(653, 554);
+            this.grp_n1.Location = new System.Drawing.Point(445, 543);
             this.grp_n1.Name = "grp_n1";
-            this.grp_n1.Size = new System.Drawing.Size(110, 58);
+            this.grp_n1.Size = new System.Drawing.Size(372, 86);
             this.grp_n1.TabIndex = 13;
             this.grp_n1.TabStop = false;
-            this.grp_n1.Text = "groupBox1";
             this.grp_n1.Visible = false;
             // 
             // lbl_5
             // 
             this.lbl_5.AutoSize = true;
-            this.lbl_5.Location = new System.Drawing.Point(30, 18);
+            this.lbl_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lbl_5.Location = new System.Drawing.Point(-2, 6);
             this.lbl_5.Name = "lbl_5";
-            this.lbl_5.Size = new System.Drawing.Size(44, 16);
+            this.lbl_5.Size = new System.Drawing.Size(374, 80);
             this.lbl_5.TabIndex = 0;
-            this.lbl_5.Text = "label1";
+            this.lbl_5.Text = resources.GetString("lbl_5.Text");
             // 
             // nud_n1
             // 
@@ -207,6 +209,7 @@
             this.Controls.Add(this.lbl_n1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grp_n1.ResumeLayout(false);
             this.grp_n1.PerformLayout();

@@ -36,12 +36,11 @@ namespace ProgettoHotel
             float parcheggio = 0;
             int giorni = 0;
 
-            // Lettura del numero di giorni dal NumericUpDown (nud_n1)
+            
             giorni = Convert.ToInt32(nud_n1.Value);
 
             
 
-            // 2. Calcolo supplemento Camera (cmb_n2)
             if (cmb_n2.SelectedIndex == 2)
             {
                 camera = 30;
@@ -55,7 +54,7 @@ namespace ProgettoHotel
                 camera = 0;
             }
 
-            // 3. Calcolo supplemento Stagione (cmb_n1)
+            
             if (cmb_n1.SelectedIndex == 2)
             {
                 stagione = 10;
@@ -69,9 +68,9 @@ namespace ProgettoHotel
                 stagione = 0;
             }
 
-            // Calcolo del costo base totale prima dello sconto
+           
             costo = (15 + camera + stagione) * giorni;
-            // 1. Calcolo tariffa Parcheggio (chk_n1)
+            
             if (chk_n1.Checked)
             {
                 parcheggio = 5;
@@ -82,7 +81,7 @@ namespace ProgettoHotel
                 parcheggio = 0;
             }
 
-            // 4. Calcolo dello Sconto progressivo sui giorni
+           
             if (giorni >= 3 && giorni <= 7)
             {
                 sconto = costo * 0.25f;
@@ -96,11 +95,16 @@ namespace ProgettoHotel
                 sconto = 0;
             }
 
-            // Calcolo del costo finale netto
+            
             costo = costo - sconto+parcheggio;
 
-            // Output finale
+            
             MessageBox.Show("Il prezzo finale è : " + costo);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
     
